@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thời Khóa Biểu</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        .buoi {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>THỜI KHÓA BIỂU</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Tiết</th>
+            <th>Thứ Hai</th>
+            <th>Thứ Ba</th>
+            <th>Thứ Tư</th>
+            <th>Thứ Năm</th>
+            <th>Thứ Sáu</th>
+            <th>Thứ Bảy</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr class="buoi">
+            <td colspan="7">BUỔI SÁNG</td>
+        </tr>
+
+        <tr>
+            <td>1</td><td>Văn</td><td>Toán</td><td>Lý</td><td>Hóa</td><td>Tiếng Anh</td><td>Ôn TN</td>
+        </tr>
+        <tr>
+            <td>2</td><td>Văn</td><td>Toán</td><td>Lý</td><td>Hóa</td><td>Tiếng Anh</td><td>Ôn TN</td>
+        </tr>
+        <tr>
+            <td>3</td><td>Tin học</td><td>Quốc phòng</td><td>HĐTN HN</td><td>GD Địa phương</td><td>Thể dục</td><td>Ôn TN</td>
+        </tr>
+        <tr>
+            <td>4</td><td>Tin học</td><td>Quốc phòng</td><td>HĐTN HN</td><td>GD Địa phương</td><td>Thể dục</td><td>Ôn TN</td>
+        </tr>
+
+        <tr class="buoi">
+            <td colspan="7">BUỔI CHIỀU</td>
+        </tr>
+
+        <tr>
+            <td>5</td><td>Tin</td><td>Anh</td><td>Văn</td><td>Văn</td><td>Hóa</td><td></td>
+        </tr>
+        <tr>
+            <td>6</td><td>Toán</td><td>TN HN</td><td>Thể dục</td><td>Thể dục</td><td>GDĐP</td><td></td>
+        </tr>
+        <tr>
+            <td>7</td><td>Ôn TN</td><td>Ôn TN</td><td>Ôn TN</td><td>Ôn TN</td><td>Ôn TN</td><td></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
