@@ -1,1 +1,12 @@
-
+h1 {
+ color: blue;
+}
+.f1 {
+    color: ocean;
+   margin-top: 18pt;
+   margin-bottom: 12pt;
+   font-size: 20px;
+   font-weight: bold;
+   font-family: Arial;
+}
+.f2 {
