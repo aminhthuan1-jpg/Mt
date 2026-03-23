@@ -1,37 +1,104 @@
-.container{
-   display: flex;
-   flex-direction: colmn;
-   height: 100vh;
-}
-.header{
-   flex: 15%;
-   background-color: lightgray;
-}
-.menu{
-   flex: 5%
-   background-color: darkgray;
-}
-.content{
-   flex: 70%
-   background-color: lightgray;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
- color: blue;
+
+html, body {
+    height: 100%;
+    overflow: hidden; 
 }
-.f1 {
-    color: ocean;
-   margin-top: 18pt;
-   margin-bottom: 12pt;
-   font-size: 20px;
-   font-weight: bold;
-   font-family: Arial;
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    height: 100vh; 
 }
-.f2 {
-    color: blue;
-   margin-top: 6pt;
-   margin-bottom: 6pt;
-   font-size: 15px;
-   front-style: normal;
-   front-family: Arial;
+
+
+.header {
+    flex: 0 0 auto; 
+    width: 100%;
+    background-color: lightgray;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.menu {
+    flex: 0 0 auto; 
+    background-color: #2c3e50; 
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.menu a {
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background-color: #1a252f;
+}
+
+
+.content {
+    flex: 1 1 auto; 
+    display: flex;
+    background-color: white;
+}
+
+
+.content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+.footer {
+    flex: 0 0 auto;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Arial;
+    font-size: 13px;
+}
+/* 1. Chỉnh lại khung Header để hiện đầy đủ nội dung */
+.header {
+    width: 100%;
+    height: auto;          /* Để chiều cao tự động theo ảnh, không bị cắt nửa */
+    max-height: 280px;     /* Giới hạn tối đa để không quá to trên máy tính */
+    overflow: hidden;
+    background-color: #001a33; 
+    display: block;
+}
+
+/* 2. Ép ảnh hiển thị trọn vẹn nhất có thể */
+.Banner-png {
+    width: 100%;
+    height: auto;          /* Giữ đúng tỷ lệ gốc của ảnh */
+    display: block;
+    
+    /* Nếu bạn muốn dùng chiều cao cố định mà không mất chữ, 
+       hãy dùng 'contain' thay vì 'cover' */
+    object-fit: contain;   
+    background-color: #001a33; /* Màu nền bù vào nếu ảnh không khít khung */
+}
+
+/* 3. Một mẹo nhỏ cho thiết bị di động (như ảnh điện thoại bạn gửi) */
+@media (max-width: 768px) {
+    .header {
+        max-height: 150px; /* Trên điện thoại thì để nhỏ lại cho vừa màn hình */
+    }
 }
