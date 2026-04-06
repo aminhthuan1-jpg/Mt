@@ -1,38 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Đóng góp ý kiến</title>
+    <title>Góp ý thư viện</title>
 </head>
-
 <body>
 
-<h2>ĐÓNG GÓP Ý KIẾN</h2>
+    <h2>Đóng góp ý kiến cho thư viện của nhà trường</h2>
 
-<form action="#" method="post">
-    
-    <!-- Họ tên -->
-    <label>Họ và tên:</label><br>
-    <input type="text" name="hoten" required><br><br>
+    <form onsubmit="return hienThiPhanHoi()">
+        <h3>1. Thông tin về người góp ý</h3>
+        Họ và tên: <input type="text"><br>
+        Địa chỉ email: <input type="text"><br>
 
-    <!-- Email -->
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+        <h3>2. Đóng góp ý kiến</h3>
+        Ý kiến đóng góp:<br>
+        <textarea rows="5" cols="40"></textarea><br>
 
-    <!-- Giới tính -->
-    <label>Giới tính:</label><br>
-    <input type="radio" name="gioitinh" value="Nam"> Nam
-    <input type="radio" name="gioitinh" value="Nữ"> Nữ<br><br>
+        Thể loại cần bổ sung thêm sách:<br>
+        <input type="checkbox"> Truyện ngắn <br>
+        <input type="checkbox"> Kĩ năng sống <br>
+        <input type="checkbox"> Công nghệ thông tin <br>
+        <input type="checkbox"> Truyện tranh <br>
+        <input type="checkbox"> Lịch sử <br><br>
 
-    <!-- Nội dung góp ý -->
-    <label>Nội dung góp ý:</label><br>
-    <textarea name="ykien" rows="5" cols="40"></textarea><br><br>
+        <input type="submit" value="Góp ý">
+    </form>
 
-    <!-- Nút -->
-    <input type="submit" value="Gửi góp ý">
-    <input type="reset" value="Nhập lại">
+    <div id="phanHoi" style="display:none; margin-top:20px;">
+        <h2>Cảm ơn bạn đã góp ý kiến</h2>
+        <p>
+            Chúng tôi xin ghi nhận ý kiến của bạn và sẽ cải tiến, nâng cao
+            chất lượng phục vụ hơn nữa trong thời gian sắp tới.
+        </p>
 
-</form>
+        <button onclick="quayLai()">Quay lại</button>
+    </div>
+
+    <script>
+        function hienThiPhanHoi() {
+            document.querySelector("form").style.display = "none";
+            document.getElementById("phanHoi").style.display = "block";
+            return false;
+        }
+
+        function quayLai() {
+            document.querySelector("form").style.display = "block";
+            document.getElementById("phanHoi").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
